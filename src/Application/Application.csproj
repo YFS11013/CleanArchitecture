@@ -6,6 +6,12 @@
     <AssemblyName>BlazorHero.CleanArchitecture.Application</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
@@ -21,14 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Features\Brands\Commands\AddEdit\AddEditBrandCommandHandler.ar.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Features\Brands\Commands\Delete\DeleteBrandCommandHandler.ar.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
